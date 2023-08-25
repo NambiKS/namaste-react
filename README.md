@@ -18,3 +18,42 @@
     - Tree Shaking - removes unnecessary/unused code
     - Create different bundles for Dev and Prod
     
+
+
+
+# Namaste Food
+/*
+* - Header Component
+    - Logo
+    - NavItems
+
+* - Body Component
+    - Search
+    - Restaurant Container
+      - Restaurant Cards
+
+* - Footer Component
+    - Copyright
+    - Links
+    - Address
+    - Contact
+*
+*/
+
+# Two tyoe of export and import
+
+default export
+export default Header;
+import Header from './Header';
+
+Named Export
+export component
+import { Component} from './NamedExport';
+
+
+# React Hooks
+- Normal JS utility Fuction
+
+- Two very imp hooks
+    1. useState()
+    2. useEffect() 
