@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -22,10 +23,10 @@ const Body = () => {
     console.log(json);
 
     setListOfRestaurants(
-      json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
+      json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
     );
     setFilteredListOfRestaurants(
-      json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
+      json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
     );
   };
 
@@ -70,7 +71,7 @@ const Body = () => {
       </div>
       <div className="res-container">
         {filteredListOfRestaurants.map((res, i) => {
-          return <RestaurantCard resData={res} key={res.info.id} />;
+          return <Link key={res.info.id} to={"/restaurants/"+res.info.id}> <RestaurantCard resData={res} /> </Link>;
         })}
       </div>
     </div>
